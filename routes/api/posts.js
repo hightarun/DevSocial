@@ -1,5 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const helmet = require("helmet");
+
+const app = express();
+
+app.use(helmet());
 
 //@route   GET api/posts
 //@desc    Test route

@@ -1,6 +1,6 @@
 const express = require("express");
-const helmet = require("helmet");
 const connectDB = require("./config/db");
+const helmet = require("helmet");
 
 const app = express();
 
