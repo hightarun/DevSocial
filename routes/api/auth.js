@@ -19,7 +19,7 @@ const User = require("../../models/User");
 router.get("/", auth, async (req, res) => {
   try {
     //find user by id and copy everything to user other than password
-    const user = await User.findById(req.user.id).select("-password");
+    const user = await User.findById(req.user.id).select("-password"); //req.user.id is returned from auth middleware which returns the id of the user from mongodb
     res.json(user);
   } catch (err) {
     console.error(err.message);

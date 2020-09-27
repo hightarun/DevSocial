@@ -32,7 +32,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, email, password } = req.body;
+    const { name, email, password } = req.body; // destructuring req.body
 
     try {
       //see if user exists
@@ -68,14 +68,14 @@ router.post(
 
       const payload = {
         user: {
-          id: user.id,
+          id: user.id, // id is automatically assigned in mongodb as _id which is abstracted as id in mongoose
         },
       };
 
       jwt.sign(
         payload,
         config.get("jwtSecret"),
-        { expiresIn: 360000 },
+        { expiresIn: 360000 }, //3600 = 1 hour
         (err, token) => {
           if (err) throw err;
           res.json({ token });
