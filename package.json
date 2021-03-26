@@ -19,7 +19,7 @@
     "gravatar": "^1.8.1",
     "helmet": "^3.23.3",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.20",
+    "mongoose": "^5.12.0",
     "prop-types": "^15.7.2",
     "request": "^2.88.2"
   },
